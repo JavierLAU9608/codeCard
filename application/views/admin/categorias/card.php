@@ -14,7 +14,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <div class="row">
                     <div class="col-md-12">
                         <a href="#" class="btn btn-primary btn-flat">
-                            <span class="fa fa-plus">Add products</span></a>
+                            <span class="fa fa-plus">Git branch MAster:</span></a>
                     </div>
                 </div>
                 <div class="row">
