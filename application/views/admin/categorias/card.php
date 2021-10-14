@@ -14,8 +14,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <div class="row">
                     <div class="col-md-12">
                         <a href="#" class="btn btn-primary btn-flat">
-                            <span class="fa fa-plus">Add products</span></a>
-                    </div>
+                            <span class="fa fa-plus">Hello world form branch home</span></a>
+                    </div>s
                 </div>
                 <div class="row">
                     <?php if (!empty($products)) : ?>
