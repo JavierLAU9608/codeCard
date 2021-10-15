@@ -19,6 +19,28 @@ class Welcome extends CI_Controller {
 		$this->load->view('layouts/footer');
 	}
 
+	public function store(){
+        $name = $this->input->post("name");
+        $description = $this->input->post("description");
+        $price = $this->input->post("price");
+        $amount = $this->input->post("amount");
+
+		$data = array(
+			'name' => $name,
+			'description' => $description,
+			'price' => $price,
+			'amount' => $amount
+			
+		);
+		if($this->Card_model->save($data)){
+			redirect(base_url()."welcome");
+		}
+			else{
+				$this->session->set_flashdata("error","No se pudo guardar la Informacion ");
+				redirect (base_url()."welcome");
+			}
+    }
+
 		
 	
 }

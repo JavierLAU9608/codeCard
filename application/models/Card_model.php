@@ -10,5 +10,8 @@
             $resultados = $this->db->get("products");
             return $resultados->result();
         }
+        public function save($data){
+            return $this->db->insert("products",$data);
+        }
     }
     ?>
