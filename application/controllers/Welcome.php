@@ -18,4 +18,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('admin/categorias/card',$data);
 		$this->load->view('layouts/footer');
 	}
+
+		
+	
 }
