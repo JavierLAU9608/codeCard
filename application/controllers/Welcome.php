@@ -41,6 +41,31 @@ class Welcome extends CI_Controller {
 			}
     }
 
+	public function product($id)
+	{
+       /* $data = array(
+            'secc' => $this->Card_model->product($id)
+            );
+		*/	
+		$data = array(
+            'secc' => $this->Card_model->product($id),
+            );
+            
+			$this->load->view('layouts/header');
+			$this->load->view('admin/categorias/test',$data);
+			$this->load->view('layouts/footer');
+    }
+	public function delete($id){
+        if($this->Card_model->remove($id)){
+		
+            redirect(base_url()."welcome");
+        }
+            else{
+                $this->session->set_flashdata("error","No se pudo eliminar la seccion de base ");
+                redirect (base_url()."admin/categorias/card");
+            }
+    }
+
 		
 	
 }
