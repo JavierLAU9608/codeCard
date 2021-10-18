@@ -21,6 +21,41 @@ $(document).ready(function(){
          
          
     });
+    $(".btn-edit-product").on("click",function(){
+        var editPro = $(this).val();
+        var viewPro = editPro.split("*");
+        html=`<div class="row">
+                    <div class="col-md-12">
+                        <form action="`+base_url+`welcome/edit" method="post">
+
+                        <input  type="text"  class="invisible" name="id" value="`+viewPro[0]+`" class="form-control">
+                            <div class="form-group">
+                                <label for="nombre">Name:</label>
+                                <input type="text" value="`+viewPro[1]`" name="name" class="form-control" id="name" placeholder="`+viewPro[1]+`">
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description:</label>
+                                <textarea name="description" value="`+viewPro[2]+`"  placeholder="`+viewPro[2]+`" id="description" cols="10" rows="5" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="price">Price:</label>
+                                <input type="text" value="`+viewPro[4]+`"  placeholder="`+viewPro[4]+`" name="price" class="form-control" id="price">
+                            </div>
+                            <div class="form-group">
+                                <label for="amount">Amount:</label>
+                                <input type="text" value="`+viewPro[3]+`" name="amount" placeholder="`+viewPro[3]+`" class="form-control" id="amount">
+                            </div>
+                          
+                        <div class="modal-footer" style="background-color: darkgrey;">
+                            <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                        </form>
+
+                    </div>
+                </div>`
+                $("#exampleModal-edit .modal-body").html(html);
+    });
 });
 </script>
 
