@@ -14,7 +14,7 @@ $(document).ready(function(){
         html="<p><strong>Usted quiere eliminar el producto:</strong>"+" "+infoProduct[1]+"</p>"    
         var id = infoProduct[0];   
         botton = `<button type="button" class="btn btn-secondary btn-send" data-dismiss="modal">No</button>
-        <a type="button" class="btn btn-danger" href="`+base_url+`/welcome/delete/`+id+`">Yes</a>`    
+        <a type="button" class="btn btn-danger" href="`+base_url+`/admin/productos_c/delete/`+id+`">Yes</a>`    
         //   
          $("#exampleModal2 .modal-body").html(html);
          $("#exampleModal2 .modal-footer").html(botton);

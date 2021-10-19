@@ -44,7 +44,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 <p><i class="icon fa fa-ban"></i><?php echo $this->session->flashdata("error"); ?></p>
                             </div>
                         <?php endif; ?>
-                        <form action="<?php echo base_url(); ?>welcome/store" method="post">
+                        <form action="<?php echo base_url(); ?>admin/productos_c/store" method="post">
                             <div class="form-group">
                                 <label for="nombre">Name:</label>
                                 <input type="text" name="name" class="form-control" id="name">
@@ -123,10 +123,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                                     </div>
                                 </div>
+                                </br>
                             </div>
+                            
                         <?php endforeach; ?>
                     <?php endif; ?>
                 </div>
+                       
             </div>
         </div>
     </section>
