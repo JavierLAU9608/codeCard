@@ -61,16 +61,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 <label for="amount">Amount:</label>
                                 <input type="text" name="amount" class="form-control" id="amount">
                             </div>
-                            <!--Upload 
-                            <div class="form-group">
-                                <input type="file" name="upload">
+
+                            <div class="modal-footer" style="background-color: darkgrey;">
+                                <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
                             </div>
-                        </form>
-                         -->
-                        <div class="modal-footer" style="background-color: darkgrey;">
-                            <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
-                        </div>
                         </form>
 
                     </div>
@@ -92,12 +87,24 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <div class="box-body">
 
 
-                <div class="row">
+                <div class="row justify-content-md-center">
                     <?php if (!empty($products)) : ?>
                         <?php foreach ($products as $key => $pro) :  ?>
-                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                <div class="card" style="width: 17rem;">
-                                    <img class="card-img-top" src="<?php echo base_url(); ?>assets/img/5.jpg" alt="Card image cap" style="height: 18rem;">
+                            <div class="col-lg-3 col-md-4 col-sm-8 col-xs-12">
+                                <div class="card" style="width: 16rem;">
+                                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img class="d-block w-100" src="<?php echo base_url();?>/assets/img/5.jpg"  style="height: 18rem;" alt="First slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100" src="<?php echo base_url();?>/assets/img/6.jpg" style="height: 18rem;" alt="Second slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100" src="<?php echo base_url();?>/assets/img/7.jpg" style="height: 18rem;" alt="Third slide">
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="card-body" style="height: 7rem;">
                                         <h5 class="card-title"><?php echo $pro->name; ?></h5>
                                         <p class="card-text"><?php echo $pro->description; ?></p>
@@ -125,11 +132,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 </div>
                                 </br>
                             </div>
-                            
+
                         <?php endforeach; ?>
                     <?php endif; ?>
                 </div>
-                       
+
             </div>
         </div>
     </section>
@@ -145,7 +152,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </button>
             </div>
             <div class="modal-body">
-                
+
             </div>
         </div>
 

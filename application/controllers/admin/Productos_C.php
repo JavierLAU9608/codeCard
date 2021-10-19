@@ -62,6 +62,33 @@ class Productos_C extends CI_Controller {
                 redirect (base_url()."admin/productos/card");
             }
     }
+	public function edit(){
+		$id = $this->input->post("id");
+		$name = $this->input->post("name");
+		$description = $this->input->post("description");
+		$price = $this->input->post("price");
+		$amount = $this->input->post("amount");
+		
+	  
+	
+		$data = array(
+			'id' => $id,
+			'name ' => $name,
+			'description' => $description,
+			'price' => $price,
+			'amount' => $amount
+		);
+	
+		if($this->Productos_model->editar( $id ,$data)){
+			
+			redirect(base_url()."admin/productos_c");
+		}
+			else{
+				$this->session->set_flashdata("error","No se pudo editar la Informacion ");
+				redirect (base_url()."admin/productos_c");
+			}
+		
+	}
 
 		
 	
